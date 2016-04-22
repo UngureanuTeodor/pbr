@@ -839,37 +839,44 @@
 ;############# Begin cod Cornel
 (defrule citestePiesa
 	?a <- (literaCitita a)
-	?b <- (piesa
-		(numarOrdine 0)
-	)
 	=>
-	(retract ?a)
-	(retract ?b)
 	(printout t "Introdu simbolul piesei pe care vrei sa o adaugi (I, J, L, O, S, T, Z): " crlf)
 	(assert (insereazaPiesaUser (read)))
+	(retract ?a)
 )
 
 (defrule rule_insereazaPiesaUser
-	?a <- (insereazaPiesaUser ?simbol)
-	?b <- (piesa 
-		(label ?simbol)
-		(casuta1DinPiesa 0 0 ?)
-		(casuta2DinPiesa 0 1 ?)
-		(casuta3DinPiesa 0 2 ?)
-		(casuta4DinPiesa 1 0 ?)
-		(casuta5DinPiesa 1 1 ?)
-		(casuta6DinPiesa 1 2 ?)
-		(casuta7DinPiesa 2 0 ?)
-		(casuta8DinPiesa 2 1 ?)
-		(casuta9DinPiesa 2 2 ?)
-	)
+	?c <- (insereazaPiesaUser ?simbol)
+	?a <- (piesa 
+			(label ?simbol)
+			(casuta1DinPiesa 0 0 ?val00)
+			(casuta2DinPiesa 0 1 ?val01)
+			(casuta3DinPiesa 0 2 ?val02)
+			(casuta4DinPiesa 1 0 ?val10)
+			(casuta5DinPiesa 1 1 ?val11)
+			(casuta6DinPiesa 1 2 ?val12)
+			(casuta7DinPiesa 2 0 ?val20)
+			(casuta8DinPiesa 2 1 ?val21)
+			(casuta9DinPiesa 2 2 ?val22)
+		  )
+	?b <- (piesa
+			(numarOrdine 0)
+			(label PiesaCurenta)
+			)
 	=>
 	(modify ?b
-		(numarOrdine 0)
-		(label PiesaCurenta)
+		(casuta1DinPiesa 0 0 ?val00)
+		(casuta2DinPiesa 0 1 ?val01)
+		(casuta3DinPiesa 0 2 ?val02)
+		(casuta4DinPiesa 1 0 ?val10)
+		(casuta5DinPiesa 1 1 ?val11)
+		(casuta6DinPiesa 1 2 ?val12)
+		(casuta7DinPiesa 2 0 ?val20)
+		(casuta8DinPiesa 2 1 ?val21)
+		(casuta9DinPiesa 2 2 ?val22)
 	)
-	(retract ?a)
 	(assert (afisareBoard))
+	(retract ?c)
 )
 ;############# End cod Cornel
 
