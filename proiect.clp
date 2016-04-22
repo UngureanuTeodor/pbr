@@ -612,9 +612,9 @@
 	(board (i 22) (j 9) (val ?val219))
 	(board (i 22) (j 10) (val ?val220))
 	
-	(random ?rnd)
+	;(random ?rnd)
 	(piesa 
-		(numarOrdine ?rnd)
+		(numarOrdine 0)
 		(casuta1DinPiesa 0 0 ?valoare00)
 		(casuta2DinPiesa 0 1 ?valoare01)
 		(casuta3DinPiesa 0 2 ?valoare02)
@@ -650,7 +650,8 @@
 	(printout t ?val21 " " ?val22 " " ?val23 " " ?val24 " " ?val25 " " ?val26 " " ?val27 " " ?val28 " " ?val29 " " ?val30 " |       |" crlf)
 	(printout t ?val11 " " ?val12 " " ?val13 " " ?val14 " " ?val15 " " ?val16 " " ?val17 " " ?val18 " " ?val19 " " ?val20 " |       |" crlf)
 	(printout t ?val1 " " ?val2 " " ?val3 " " ?val4 " " ?val5 " " ?val6 " " ?val7 " " ?val8 " " ?val9 " " ?val10 " |       |" crlf)
-	(printout t "Apasa r pentru rotire ")
+	(printout t "Apasa r pentru rotire " crlf)
+	(printout t "Apasa a pentru adaugare piesa" crlf)
 	(assert (literaCitita (read)))
 )
 
@@ -834,6 +835,43 @@
 	(assert (random (random 1 ?np)))
 	(assert (updatePiesaAnterioara))
 )
+
+;############# Begin cod Cornel
+(defrule citestePiesa
+	?a <- (literaCitita a)
+	?b <- (piesa
+		(numarOrdine 0)
+	)
+	=>
+	(retract ?a)
+	(retract ?b)
+	(printout t "Introdu simbolul piesei pe care vrei sa o adaugi (I, J, L, O, S, T, Z): " crlf)
+	(assert (insereazaPiesaUser (read)))
+)
+
+(defrule rule_insereazaPiesaUser
+	?a <- (insereazaPiesaUser ?simbol)
+	?b <- (piesa 
+		(label ?simbol)
+		(casuta1DinPiesa 0 0 ?)
+		(casuta2DinPiesa 0 1 ?)
+		(casuta3DinPiesa 0 2 ?)
+		(casuta4DinPiesa 1 0 ?)
+		(casuta5DinPiesa 1 1 ?)
+		(casuta6DinPiesa 1 2 ?)
+		(casuta7DinPiesa 2 0 ?)
+		(casuta8DinPiesa 2 1 ?)
+		(casuta9DinPiesa 2 2 ?)
+	)
+	=>
+	(modify ?b
+		(numarOrdine 0)
+		(label PiesaCurenta)
+	)
+	(retract ?a)
+	(assert (afisareBoard))
+)
+;############# End cod Cornel
 
 (defrule rotire
 	?a <- (literaCitita r)
