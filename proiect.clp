@@ -382,6 +382,8 @@
 (deffacts iustinFacts
 	(checkEnding 0)
 	(x0_1 0)
+	(searchLineToDelete 0)
+	(iterator 1)
 )
 
 (defrule menu
@@ -1792,6 +1794,20 @@
 
 
 ;;end check_ending
+
+;; merge check_ending to delete_lines
+
+(defrule make_merge
+	?a <- (checkEnding 1)
+	?b <- (lastmove 1)
+	?c <- (searchLineToDelete ?)
+	=>
+	(retract ?a)
+	(retract ?c)
+	(assert (checkEnding 0))
+	(assert (searchLineToDelete 1))
+)
+
 
 
 ;;start delete_line
