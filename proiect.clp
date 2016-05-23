@@ -383,7 +383,6 @@
 	(checkEnding 0)
 	(x0_1 0)
 	(searchLineToDelete 0)
-	(iterator 1)
 )
 
 (defrule menu
@@ -1324,7 +1323,7 @@
 	(x0_1 ?x0_1)
 
 	(board (i ?x0_1) (j ?y1) (val ?p2))
-	(or (test (eq ?p2 1)) (test (eq ?x0 0)))
+	(test (eq ?p2 1))
 	=>
 	(assert (lastmove 1))
 )
@@ -1358,7 +1357,7 @@
 	(board (i ?x0) (j ?y0) (val ?p1))
 	(board (i ?x0) (j ?y1) (val ?p2))
 	(board (i ?x0) (j ?y2) (val ?p3))
-	(or (test (eq ?p1 1)) (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 1)))
+	(or (test (eq ?p1 1)) (test (eq ?p2 1)) (test (eq ?p3 1)))
 	=>
 	(assert (lastmove 1))
 )
@@ -1389,7 +1388,7 @@
 	(x0_1 ?x0_1)
 	(board (i ?x0_1) (j ?y1) (val ?p2))
 	(board (i ?x0_1) (j ?y2) (val ?p3))
-	(or (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 1)))
+	(or (test (eq ?p2 1)) (test (eq ?p3 1)))
 	=>
 	(assert (lastmove 1))
 )
@@ -1422,7 +1421,7 @@
 	(board (i ?x0) (j ?y0) (val ?p1))
 	(board (i ?x0) (j ?y1) (val ?p2))
 	(board (i ?x0_1) (j ?y2) (val ?p3))
-	(or (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 1)))
+	(or (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?p3 1)))
 	=>
 	(assert (lastmove 1))
 )
@@ -1454,7 +1453,7 @@
 	(x0_1 ?x0_1)
 	(board (i ?x_1) (j ?y0) (val ?p1))
 	(board (i ?x_1) (j ?y1) (val ?p2))
-	(or (test (eq ?p1 1)) (test (eq ?p2 1)) (test (eq ?x0 1)))
+	(or (test (eq ?p1 1)) (test (eq ?p2 1)))
 	=>
 	(assert (lastmove 1))
 )
@@ -1489,7 +1488,7 @@
 	(x0_1 ?x0_1)
 	(board (i ?x_1) (j ?y1) (val ?p2))
 	(board (i ?x1) (j ?y2) (val ?p3))
-	(or (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 1)))
+	(or (test (eq ?p2 1)) (test (eq ?p3 1)))
 	=>
 	(assert (lastmove 1))
 )
@@ -1523,7 +1522,7 @@
 	(x0_1 ?x0_1)
 	(board (i ?x1) (j ?y0) (val ?p1))
 	(board (i ?x0_1) (j ?y1) (val ?p2))
-	(or (test (eq ?p1 1)) (test (eq ?p2 1)) (test (eq ?x0 1)))
+	(or (test (eq ?p1 1)) (test (eq ?p2 1)))
 	=>
 	(assert (lastmove 1))
 )
@@ -1556,7 +1555,7 @@
 	(board (i ?x0_1) (j ?y0) (val ?p1))
 	(board (i ?x0) (j ?y1) (val ?p2))
 	(board (i ?x0) (j ?y2) (val ?p3))
-	(or (test (eq ?p1 1)) (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 1)))
+	(or (test (eq ?p1 1)) (test (eq ?p2 1)) (test (eq ?p3 1)))
 	=>
 	(assert (lastmove 1))
 )
@@ -1588,7 +1587,7 @@
 	(board (i ?x0_1) (j ?y0) (val ?p1))
 	(board (i ?x0_1) (j ?y1) (val ?p2))
 	(board (i ?x0) (j ?y2) (val ?p3))
-	(or (test (eq ?p1 1)) (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 1)))
+	(or (test (eq ?p1 1)) (test (eq ?p2 1)) (test (eq ?p3 1)) )
 	=>
 	(assert (lastmove 1))
 )
@@ -1619,7 +1618,7 @@
 	(x0_1 ?x0_1)
 	(board (i ?x0) (j ?y0) (val ?p1))
 	(board (i ?x0_1) (j ?y1) (val ?p2))
-	(or (test (eq ?p1 1)) (test (eq ?p2 1)) (test (eq ?x0 1)))
+	(or (test (eq ?p1 1)) (test (eq ?p2 1)) )
 	=>
 	(assert (lastmove 1))
 )
@@ -1651,7 +1650,7 @@
 	(board (i ?x0) (j ?y0) (val ?p1))
 	(board (i ?x0_1) (j ?y1) (val ?p2))
 	(board (i ?x0_1) (j ?y2) (val ?p3))
-	(or (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 1)))
+	(or (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?p3 1)))
 	=>
 	(assert (lastmove 1))
 )
@@ -1685,7 +1684,7 @@
 	(board (i ?x0_1) (j ?y0) (val ?p1))
 	(board (i ?x0) (j ?y1) (val ?p2))
 	(board (i ?x0) (j ?y2) (val ?p3))
-	(or (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 1)))
+	(or (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?p3 1)) )
 	=>
 	(assert (lastmove 1))
 )
@@ -1719,7 +1718,7 @@
 	(board (i ?x0) (j ?y0) (val ?p1))
 	(board (i ?x0_1) (j ?y1) (val ?p2))
 	(board (i ?x0) (j ?y2) (val ?p3))
-	(or (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 1)))
+	(or (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?p3 1)) )
 	=>
 	(assert (lastmove 1))
 )
@@ -1753,7 +1752,7 @@
 	(x0_1 ?x0_1)
 	(board (i ?x0) (j ?y0) (val ?p1))
 	(board (i ?x0_1) (j ?y1) (val ?p2))
-	(or (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?x0 1)))
+	(or (test (eq ?p1 1))  (test (eq ?p2 1)))
 	=>
 	(assert (lastmove 1))
 )
@@ -1805,6 +1804,7 @@
 	(retract ?a)
 	(retract ?c)
 	(assert (checkEnding 0))
+	(assert (iterator 1))
 	(assert (searchLineToDelete 1))
 )
 
@@ -1826,7 +1826,7 @@
 	(board (i ?it) (j 8) (val ?v8))
 	(board (i ?it) (j 9) (val ?v9))
 	(board (i ?it) (j 10) (val ?v10))
-	(and (test (eq ?v1 ?v2)) (test (eq ?v2 ?v3)) (test (eq ?v3 ?v4)) (test (eq ?v4 ?v5)) (test (eq ?v5 ?v6)) (test (eq ?v6 ?v7)) (test (eq ?v7 ?v8)) (test (eq ?v8 ?v9)) (test (eq ?v9 ?v10)))
+	(and (test (eq ?v1 ?v2)) (test (eq ?v2 ?v3)) (test (eq ?v3 ?v4)) (test (eq ?v4 ?v5)) (test (eq ?v5 ?v6)) (test (eq ?v6 ?v7)) (test (eq ?v7 ?v8)) (test (eq ?v8 ?v9)) (test (eq ?v9 ?v10)) (test (eq ?v10 1)))
 	=>
 	(assert (foundLine 1))
 	(assert (lineToDelete ?it))
@@ -1847,7 +1847,7 @@
 	(board (i ?it) (j 8) (val ?v8))
 	(board (i ?it) (j 9) (val ?v9))
 	(board (i ?it) (j 10) (val ?v10))
-	(or (test (neq ?v1 ?v2)) (test (neq ?v2 ?v3)) (test (neq ?v3 ?v4)) (test (neq ?v4 ?v5)) (test (neq ?v5 ?v6)) (test (neq ?v6 ?v7)) (test (neq ?v7 ?v8)) (test (neq ?v8 ?v9)) (test (neq ?v9 ?v10)))
+	(or (test (eq ?v1 0)) (test (eq ?v2 0)) (test (eq ?v3 0)) (test (eq ?v4 0)) (test (eq ?v5 0)) (test (eq ?v6 0)) (test (eq ?v7 0)) (test (eq ?v8 0)) (test (eq ?v9 0)) (test (eq ?v10 0)))
 	=>
 	(retract ?a)
 	(assert (iterator (+ ?it 1)))
