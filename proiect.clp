@@ -1436,7 +1436,7 @@
 	(board (i ?x0_1) (j ?y0) (val ?p1))
 	(board (i ?x0) (j ?y1) (val ?p2))
 	(board (i ?x0) (j ?y2) (val ?p3))
-	(and (test (eq ?p1 1)) (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 0)))
+	(or (test (eq ?p1 1)) (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 0)))
 	=>
 	(assert (lastmove 1))
 )
@@ -1468,7 +1468,7 @@
 	(board (i ?x0_1) (j ?y0) (val ?p1))
 	(board (i ?x0_1) (j ?y1) (val ?p2))
 	(board (i ?x0) (j ?y2) (val ?p3))
-	(and (test (eq ?p1 1)) (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 0)))
+	(or (test (eq ?p1 1)) (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 0)))
 	=>
 	(assert (lastmove 1))
 )
@@ -1499,7 +1499,7 @@
 	?x0_1 <- (- ?x0 1)
 	(board (i ?x0) (j ?y0) (val ?p1))
 	(board (i ?x0_1) (j ?y1) (val ?p2))
-	(and (test (eq ?p1 1)) (test (eq ?p2 1)) (test (eq ?x0 0)))
+	(or (test (eq ?p1 1)) (test (eq ?p2 1)) (test (eq ?x0 0)))
 	=>
 	(assert (lastmove 1))
 )
@@ -1531,7 +1531,7 @@
 	(board (i ?x0) (j ?y0) (val ?p1))
 	(board (i ?x0_1) (j ?y1) (val ?p2))
 	(board (i ?x0_1) (j ?y2) (val ?p3))
-	(and (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 0)))
+	(or (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 0)))
 	=>
 	(assert (lastmove 1))
 )
@@ -1565,7 +1565,7 @@
 	(board (i ?x0_1) (j ?y0) (val ?p1))
 	(board (i ?x0) (j ?y1) (val ?p2))
 	(board (i ?x0) (j ?y2) (val ?p3))
-	(and (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 0)))
+	(or (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 0)))
 	=>
 	(assert (lastmove 1))
 )
@@ -1599,7 +1599,7 @@
 	(board (i ?x0) (j ?y0) (val ?p1))
 	(board (i ?x0_1) (j ?y1) (val ?p2))
 	(board (i ?x0) (j ?y2) (val ?p3))
-	(and (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 0)))
+	(or (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?p3 1)) (test (eq ?x0 0)))
 	=>
 	(assert (lastmove 1))
 )
@@ -1633,7 +1633,7 @@
 	?x0_1 <- (- ?x0 1)
 	(board (i ?x0) (j ?y0) (val ?p1))
 	(board (i ?x0_1) (j ?y1) (val ?p2))
-	(and (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?x0 0)))
+	(or (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?x0 0)))
 	=>
 	(assert (lastmove 1))
 )
