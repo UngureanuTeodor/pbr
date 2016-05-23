@@ -779,18 +779,6 @@
 	(assert (updatePiesaCurenta))
 )
 
-;(defrule verifica_limita_mutareStanga
-;	(optiune 1)
-;	?a <- (introducerePieseCurenta)
-;	(or (y0 0)
-;		(y1 0)
-;		(y2 0)
-;	)
-;	=>
-;	(retract ?a)
-;	(assert (afisareBoard))
-;)
-
 (defrule introducerePiesaCurentaPeTabla
 	(optiune 1)
 	?a <- (introducerePieseCurenta)
@@ -838,16 +826,30 @@
 	(assert (afisareBoard))
 )
 
-;(defrule piesaUrmatoare
-;	(optiune 1)
-;	(random ?rnd)
-;	(numarPiese ?np)
-;	?a <- (piesaUrmatoare)
-;	=>
-;	(retract ?a)
-;	(assert (piesaCurenta ?rnd))
-;	(assert (random (random 1 ?np)))
-;)
+(defrule piesaUrmatoare
+	(optiune 1)
+	?b <- (random ?rnd)
+	(numarPiese ?np)
+	?a <- (lastmove 1)
+	=>
+	(retract ?a)
+	(retract ?b)
+	(assert (piesaCurenta ?rnd))
+	(assert (x0 20))
+	(assert (x1 21))
+	(assert (x2 22))
+	(assert (y0 5))
+	(assert (y1 6))
+	(assert (y2 7))
+	(assert (x0next -1))
+	(assert (x1next -1))
+	(assert (x2next -1))
+	(assert (y0next -1))
+	(assert (y1next -1))
+	(assert (y2next -1))
+	(assert (random (random 1 ?np)))
+	(assert (updatePiesaAnterioara))
+)
 
 (defrule randomInitial
 	(optiune 1)
