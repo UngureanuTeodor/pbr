@@ -447,6 +447,19 @@
 	(x0_1 0)
 	(searchLineToDelete 0)
 )
+(deffacts factsAna
+	(limitaCol1 22)
+	(limitaCol2 22)
+	(limitaCol3 22)
+	(limitaCol4 22)
+	(limitaCol5 22)
+	(limitaCol6 22)
+	(limitaCol7 22)
+	(limitaCol8 22)
+	(limitaCol9 22)
+	(limitaCol10 22)	
+)
+
 
 (defrule menu
 	?a <- (menu 1)
@@ -1053,6 +1066,157 @@
 	(assert (afisareBoard))
 )
 
+(defrule limitaPiesa1 (declare (salience 2))
+	?addr <- (limitaPiesaTabla)
+	(piesa 
+		(numarOrdine 0)
+		(casuta1DinPiesa 0 0 ?val1)
+		(casuta2DinPiesa 0 1 ?val2)
+		(casuta3DinPiesa 0 2 ?val3)
+	)
+	(or
+		(test (eq ?val1 1))
+		(test (eq ?val2 1))
+		(test (eq ?val3 1))
+	)
+	(x0 ?value)
+	=>
+	(retract ?addr)
+	(assert (limitaSus ?value))
+	(printout t "limitapiesa: " ?value crlf)
+)	
+
+(defrule limitaPiesa2  (declare (salience 1))
+	?addr <- (limitaPiesaTabla)
+	(piesa 
+		(numarOrdine 0)
+		(casuta4DinPiesa 1 0 ?val4)
+		(casuta5DinPiesa 1 1 ?val5)
+		(casuta6DinPiesa 1 2 ?val6)
+	)
+	(or
+		(test (eq ?val4 1))
+		(test (eq ?val5 1))
+		(test (eq ?val6 1))
+	)
+	(x1 ?value)
+	=>
+	(retract ?addr)
+	(assert (limitaSus ?value))
+	(printout t "limitapiesa: " ?value crlf)
+)	
+
+(defrule limitaPiesa3
+	?addr <- (limitaPiesaTabla)
+	(piesa 
+		(numarOrdine 0)
+		(casuta7DinPiesa 2 0 ?val7)
+		(casuta8DinPiesa 2 1 ?val8)
+		(casuta9DinPiesa 2 2 ?val9)
+	)
+	(or
+		(test (eq ?val7 1))
+		(test (eq ?val8 1))
+		(test (eq ?val9 1))
+	)
+	(x2 ?value)
+	=>
+	(retract ?addr)
+	(assert (limitaSus ?value))
+	(printout t "limitapiesa: " ?value crlf)
+)	
+
+
+(defrule limitaColoana1
+	?a <- (limitaCol1 ?linie)
+	(board (i ?linie) (j 1) (val ?val1))
+	(test (eq ?val1 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol1 (- ?linie 1)))
+)
+
+(defrule limitaColoana2
+	?a <- (limitaCol2 ?linie)
+	(board (i ?linie) (j 2) (val ?val2))
+	(test (eq ?val2 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol2 (- ?linie 1)))
+)
+
+(defrule limitaColoana3
+	?a <- (limitaCol3 ?linie)
+	(board (i ?linie) (j 3) (val ?val3))
+	(test (eq ?val3 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol3 (- ?linie 1)))
+)
+
+(defrule limitaColoana4
+	?a <- (limitaCol4 ?linie)
+	(board (i ?linie) (j 4) (val ?val4))
+	(test (eq ?val4 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol4 (- ?linie 1)))
+)
+
+(defrule limitaColoana5
+	?a <- (limitaCol5 ?linie)
+	(board (i ?linie) (j 5) (val ?val5))
+	(test (eq ?val5 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol5 (- ?linie 1)))
+)
+
+(defrule limitaColoana6
+	?a <- (limitaCol6 ?linie)
+	(board (i ?linie) (j 6) (val ?val6))
+	(test (eq ?val6 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol6 (- ?linie 1)))
+)
+
+(defrule limitaColoana7
+	?a <- (limitaCol7 ?linie)
+	(board (i ?linie) (j 7) (val ?val7))
+	(test (eq ?val7 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol7 (- ?linie 1)))
+)
+
+(defrule limitaColoana8
+	?a <- (limitaCol8 ?linie)
+	(board (i ?linie) (j 8) (val ?val8))
+	(test (eq ?val8 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol8 (- ?linie 1)))
+)
+
+(defrule limitaColoana9
+	?a <- (limitaCol9 ?linie)
+	(board (i ?linie) (j 9) (val ?val9))
+	(test (eq ?val9 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol9 (- ?linie 1)))
+)
+
+(defrule limitaColoana10
+	?a <- (limitaCol10 ?linie)
+	(board (i ?linie) (j 10) (val ?val10))
+	(test (eq ?val10 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol10 (- ?linie 1)))
+)
+
 (defrule piesaUrmatoare
 	(optiune 1)
 	?b <- (random ?rnd)
@@ -1064,6 +1228,17 @@
 	?l4 <- (y0 ?)
 	?l5 <- (y1 ?)
 	?l6 <- (y2 ?)
+
+	?a1 <- (limitaCol1 ?)
+	?a2 <- (limitaCol2 ?)
+	?a3 <- (limitaCol3 ?)
+	?a4 <- (limitaCol4 ?)
+	?a5 <- (limitaCol5 ?)
+	?a6 <- (limitaCol6 ?)
+	?a7 <- (limitaCol7 ?)
+	?a8 <- (limitaCol8 ?)
+	?a9 <- (limitaCol9 ?)
+	?a10 <- (limitaCol10 ?)
 	=>
 	(retract ?a)
 	(retract ?b)
@@ -1088,12 +1263,45 @@
 	(assert (y2next -1))
 	(assert (random (random 1 ?np)))
 	(assert (updatePiesaAnterioara))
+
+	(retract ?a1)
+	(retract ?a2)
+	(retract ?a3)
+	(retract ?a4)
+	(retract ?a5)
+	(retract ?a6)
+	(retract ?a7)
+	(retract ?a8)
+	(retract ?a9)
+	(retract ?a10)
+	(assert (limitaCol1 22))
+	(assert (limitaCol2 22))
+	(assert (limitaCol3 22))
+	(assert (limitaCol4 22))
+	(assert (limitaCol5 22))
+	(assert (limitaCol6 22))
+	(assert (limitaCol7 22))
+	(assert (limitaCol8 22))
+	(assert (limitaCol9 22))
+	(assert (limitaCol10 22))
+	(assert (limitaPiesaTabla))
 )
 
 (defrule randomInitial
 	(optiune 1)
 	(numarPiese ?np)
 	(not (random ?))
+
+	?a1 <- (limitaCol1 ?)
+	?a2 <- (limitaCol2 ?)
+	?a3 <- (limitaCol3 ?)
+	?a4 <- (limitaCol4 ?)
+	?a5 <- (limitaCol5 ?)
+	?a6 <- (limitaCol6 ?)
+	?a7 <- (limitaCol7 ?)
+	?a8 <- (limitaCol8 ?)
+	?a9 <- (limitaCol9 ?)
+	?a10 <- (limitaCol10 ?)
 	=>
 	(assert (piesaCurenta (random 1 ?np)))
 	(assert (x0 20))
@@ -1110,6 +1318,31 @@
 	(assert (y2next -1))
 	(assert (random (random 1 ?np)))
 	(assert (updatePiesaAnterioara))
+
+	(retract ?a1)
+	(retract ?a2)
+	(retract ?a3)
+	(retract ?a4)
+	(retract ?a5)
+	(retract ?a6)
+	(retract ?a7)
+	(retract ?a8)
+	(retract ?a9)
+	(retract ?a10)
+	(assert (limitaCol1 22))
+	(assert (limitaCol2 22))
+	(assert (limitaCol3 22))
+	(assert (limitaCol4 22))
+	(assert (limitaCol5 22))
+	(assert (limitaCol6 22))
+	(assert (limitaCol7 22))
+	(assert (limitaCol8 22))
+	(assert (limitaCol9 22))
+	(assert (limitaCol10 22))
+
+	(assert (limitaPiesaTabla))
+
+
 )
 
 
