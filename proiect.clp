@@ -1,3 +1,212 @@
+(deftemplate piesaAcoperis
+	(slot column)
+	
+	;coltul stanga jos al piesei
+	(multislot casuta1DinPiesa)
+	(multislot casuta2DinPiesa)
+	(multislot casuta3DinPiesa)
+	(multislot casuta4DinPiesa)
+	(multislot casuta5DinPiesa)
+	(multislot casuta6DinPiesa)
+	(multislot casuta7DinPiesa)
+	(multislot casuta8DinPiesa)
+	(multislot casuta9DinPiesa)
+	(multislot casuta10DinPiesa)
+	(multislot casuta11DinPiesa)
+	;coltul dreapta sus al piesei
+	(multislot casuta12DinPiesa)
+)
+
+(deffacts initializarePieseAcoperis
+	(piesaAcoperis
+		(column 1)
+		
+		(casuta1DinPiesa 0 0 0)
+		(casuta2DinPiesa 0 0 0)
+		(casuta3DinPiesa 0 0 0)
+		(casuta4DinPiesa 0 0 0)
+		(casuta5DinPiesa 0 0 0)
+		(casuta6DinPiesa 0 0 0)
+		(casuta7DinPiesa 0 0 0)
+		(casuta8DinPiesa 0 0 0)
+		(casuta9DinPiesa 0 0 0)
+		(casuta10DinPiesa 0 0 0)
+		(casuta11DinPiesa 0 0 0)
+		(casuta12DinPiesa 0 0 0)		
+	)
+	
+	(piesaAcoperis
+		(column 2)
+		
+		(casuta1DinPiesa 0 0 0)
+		(casuta2DinPiesa 0 0 0)
+		(casuta3DinPiesa 0 0 0)
+		(casuta4DinPiesa 0 0 0)
+		(casuta5DinPiesa 0 0 0)
+		(casuta6DinPiesa 0 0 0)
+		(casuta7DinPiesa 0 0 0)
+		(casuta8DinPiesa 0 0 0)
+		(casuta9DinPiesa 0 0 0)
+		(casuta10DinPiesa 0 0 0)
+		(casuta11DinPiesa 0 0 0)
+		(casuta12DinPiesa 0 0 0)		
+	)
+	
+	(piesaAcoperis
+		(column 3)
+		
+		(casuta1DinPiesa 0 0 0)
+		(casuta2DinPiesa 0 0 0)
+		(casuta3DinPiesa 0 0 0)
+		(casuta4DinPiesa 0 0 0)
+		(casuta5DinPiesa 0 0 0)
+		(casuta6DinPiesa 0 0 0)
+		(casuta7DinPiesa 0 0 0)
+		(casuta8DinPiesa 0 0 0)
+		(casuta9DinPiesa 0 0 0)
+		(casuta10DinPiesa 0 0 0)
+		(casuta11DinPiesa 0 0 0)
+		(casuta12DinPiesa 0 0 0)		
+	)
+	
+	(piesaAcoperis
+		(column 4)
+		
+		(casuta1DinPiesa 0 0 0)
+		(casuta2DinPiesa 0 0 0)
+		(casuta3DinPiesa 0 0 0)
+		(casuta4DinPiesa 0 0 0)
+		(casuta5DinPiesa 0 0 0)
+		(casuta6DinPiesa 0 0 0)
+		(casuta7DinPiesa 0 0 0)
+		(casuta8DinPiesa 0 0 0)
+		(casuta9DinPiesa 0 0 0)
+		(casuta10DinPiesa 0 0 0)
+		(casuta11DinPiesa 0 0 0)
+		(casuta12DinPiesa 0 0 0)		
+	)
+	
+	(piesaAcoperis
+		(column 4)
+		
+		(casuta1DinPiesa 0 0 0)
+		(casuta2DinPiesa 0 0 0)
+		(casuta3DinPiesa 0 0 0)
+		(casuta4DinPiesa 0 0 0)
+		(casuta5DinPiesa 0 0 0)
+		(casuta6DinPiesa 0 0 0)
+		(casuta7DinPiesa 0 0 0)
+		(casuta8DinPiesa 0 0 0)
+		(casuta9DinPiesa 0 0 0)
+		(casuta10DinPiesa 0 0 0)
+		(casuta11DinPiesa 0 0 0)
+		(casuta12DinPiesa 0 0 0)		
+	)
+	
+	(piesaAcoperis
+		(column 5)
+		
+		(casuta1DinPiesa 0 0 0)
+		(casuta2DinPiesa 0 0 0)
+		(casuta3DinPiesa 0 0 0)
+		(casuta4DinPiesa 0 0 0)
+		(casuta5DinPiesa 0 0 0)
+		(casuta6DinPiesa 0 0 0)
+		(casuta7DinPiesa 0 0 0)
+		(casuta8DinPiesa 0 0 0)
+		(casuta9DinPiesa 0 0 0)
+		(casuta10DinPiesa 0 0 0)
+		(casuta11DinPiesa 0 0 0)
+		(casuta12DinPiesa 0 0 0)		
+	)
+	
+	(piesaAcoperis
+		(column 6)
+		
+		(casuta1DinPiesa 0 0 0)
+		(casuta2DinPiesa 0 0 0)
+		(casuta3DinPiesa 0 0 0)
+		(casuta4DinPiesa 0 0 0)
+		(casuta5DinPiesa 0 0 0)
+		(casuta6DinPiesa 0 0 0)
+		(casuta7DinPiesa 0 0 0)
+		(casuta8DinPiesa 0 0 0)
+		(casuta9DinPiesa 0 0 0)
+		(casuta10DinPiesa 0 0 0)
+		(casuta11DinPiesa 0 0 0)
+		(casuta12DinPiesa 0 0 0)		
+	)
+	
+	(piesaAcoperis
+		(column 7)
+		
+		(casuta1DinPiesa 0 0 0)
+		(casuta2DinPiesa 0 0 0)
+		(casuta3DinPiesa 0 0 0)
+		(casuta4DinPiesa 0 0 0)
+		(casuta5DinPiesa 0 0 0)
+		(casuta6DinPiesa 0 0 0)
+		(casuta7DinPiesa 0 0 0)
+		(casuta8DinPiesa 0 0 0)
+		(casuta9DinPiesa 0 0 0)
+		(casuta10DinPiesa 0 0 0)
+		(casuta11DinPiesa 0 0 0)
+		(casuta12DinPiesa 0 0 0)		
+	)
+	
+	(piesaAcoperis
+		(column 8)
+		
+		(casuta1DinPiesa 0 0 0)
+		(casuta2DinPiesa 0 0 0)
+		(casuta3DinPiesa 0 0 0)
+		(casuta4DinPiesa 0 0 0)
+		(casuta5DinPiesa 0 0 0)
+		(casuta6DinPiesa 0 0 0)
+		(casuta7DinPiesa 0 0 0)
+		(casuta8DinPiesa 0 0 0)
+		(casuta9DinPiesa 0 0 0)
+		(casuta10DinPiesa 0 0 0)
+		(casuta11DinPiesa 0 0 0)
+		(casuta12DinPiesa 0 0 0)		
+	)
+	
+	(piesaAcoperis
+		(column 9)
+		
+		(casuta1DinPiesa 0 0 0)
+		(casuta2DinPiesa 0 0 0)
+		(casuta3DinPiesa 0 0 0)
+		(casuta4DinPiesa 0 0 0)
+		(casuta5DinPiesa 0 0 0)
+		(casuta6DinPiesa 0 0 0)
+		(casuta7DinPiesa 0 0 0)
+		(casuta8DinPiesa 0 0 0)
+		(casuta9DinPiesa 0 0 0)
+		(casuta10DinPiesa 0 0 0)
+		(casuta11DinPiesa 0 0 0)
+		(casuta12DinPiesa 0 0 0)		
+	)
+	
+	(piesaAcoperis
+		(column 10)
+		
+		(casuta1DinPiesa 0 0 0)
+		(casuta2DinPiesa 0 0 0)
+		(casuta3DinPiesa 0 0 0)
+		(casuta4DinPiesa 0 0 0)
+		(casuta5DinPiesa 0 0 0)
+		(casuta6DinPiesa 0 0 0)
+		(casuta7DinPiesa 0 0 0)
+		(casuta8DinPiesa 0 0 0)
+		(casuta9DinPiesa 0 0 0)
+		(casuta10DinPiesa 0 0 0)
+		(casuta11DinPiesa 0 0 0)
+		(casuta12DinPiesa 0 0 0)		
+	)
+)
+
+
 (deftemplate board
 	(slot i)
 	(slot j)
@@ -7,6 +216,7 @@
 (deftemplate piesa
 	(slot numarOrdine)
 	(slot label)
+	(slot rotire)
 	
 	(multislot casuta1DinPiesa)
 	(multislot casuta2DinPiesa)
@@ -20,47 +230,37 @@
 )
 
 (deffacts initializareBoard
-	(board (i 0) (j 1) (val 1))
-	(board (i 0) (j 2) (val 1))
-	(board (i 0) (j 3) (val 1))
-	(board (i 0) (j 4) (val 1))
-	(board (i 0) (j 5) (val 1))
-	(board (i 0) (j 6) (val 1))
-	(board (i 0) (j 7) (val 1))
-	(board (i 0) (j 8) (val 1))
-	(board (i 0) (j 9) (val 1))
-	(board (i 0) (j 10) (val 1))
 	(board (i 1) (j 1) (val 1))
 	(board (i 1) (j 2) (val 1))
 	(board (i 1) (j 3) (val 1))
-	(board (i 1) (j 4) (val 1))
+	(board (i 1) (j 4) (val 0))
 	(board (i 1) (j 5) (val 1))
 	(board (i 1) (j 6) (val 1))
 	(board (i 1) (j 7) (val 1))
 	(board (i 1) (j 8) (val 1))
 	(board (i 1) (j 9) (val 1))
 	(board (i 1) (j 10) (val 1))
-	(board (i 2) (j 1) (val 0))
+	(board (i 2) (j 1) (val 1))
 	(board (i 2) (j 2) (val 0))
-	(board (i 2) (j 3) (val 0))
+	(board (i 2) (j 3) (val 1))
 	(board (i 2) (j 4) (val 0))
-	(board (i 2) (j 5) (val 0))
-	(board (i 2) (j 6) (val 0))
-	(board (i 2) (j 7) (val 0))
-	(board (i 2) (j 8) (val 0))
-	(board (i 2) (j 9) (val 0))
-	(board (i 2) (j 10) (val 0))
-	(board (i 3) (j 1) (val 0))
+	(board (i 2) (j 5) (val 1))
+	(board (i 2) (j 6) (val 1))
+	(board (i 2) (j 7) (val 1))
+	(board (i 2) (j 8) (val 1))
+	(board (i 2) (j 9) (val 1))
+	(board (i 2) (j 10) (val 1))
+	(board (i 3) (j 1) (val 1))
 	(board (i 3) (j 2) (val 0))
-	(board (i 3) (j 3) (val 0))
+	(board (i 3) (j 3) (val 1))
 	(board (i 3) (j 4) (val 0))
-	(board (i 3) (j 5) (val 0))
+	(board (i 3) (j 5) (val 1))
 	(board (i 3) (j 6) (val 0))
-	(board (i 3) (j 7) (val 0))
+	(board (i 3) (j 7) (val 1))
 	(board (i 3) (j 8) (val 0))
-	(board (i 3) (j 9) (val 0))
-	(board (i 3) (j 10) (val 0))
-	(board (i 4) (j 1) (val 0))
+	(board (i 3) (j 9) (val 1))
+	(board (i 3) (j 10) (val 1))
+	(board (i 4) (j 1) (val 1))
 	(board (i 4) (j 2) (val 0))
 	(board (i 4) (j 3) (val 0))
 	(board (i 4) (j 4) (val 0))
@@ -70,7 +270,7 @@
 	(board (i 4) (j 8) (val 0))
 	(board (i 4) (j 9) (val 0))
 	(board (i 4) (j 10) (val 0))
-	(board (i 5) (j 1) (val 0))
+	(board (i 5) (j 1) (val 1))
 	(board (i 5) (j 2) (val 0))
 	(board (i 5) (j 3) (val 0))
 	(board (i 5) (j 4) (val 0))
@@ -100,11 +300,11 @@
 	(board (i 7) (j 8) (val 0))
 	(board (i 7) (j 9) (val 0))
 	(board (i 7) (j 10) (val 0))
-	(board (i 8) (j 1) (val 0))
+	(board (i 8) (j 1) (val 1))
 	(board (i 8) (j 2) (val 0))
-	(board (i 8) (j 3) (val 0))
+	(board (i 8) (j 3) (val 1))
 	(board (i 8) (j 4) (val 0))
-	(board (i 8) (j 5) (val 0))
+	(board (i 8) (j 5) (val 1))
 	(board (i 8) (j 6) (val 0))
 	(board (i 8) (j 7) (val 0))
 	(board (i 8) (j 8) (val 0))
@@ -347,6 +547,7 @@
 	(piesa 
 		(numarOrdine 0)
 		(label PiesaCurenta)
+		(rotire 0)
 		(casuta1DinPiesa 0 0 0)
 		(casuta2DinPiesa 0 1 0)
 		(casuta3DinPiesa 0 2 0)
@@ -357,6 +558,67 @@
 		(casuta8DinPiesa 2 1 0)
 		(casuta9DinPiesa 2 2 0)
 	)
+	
+	(piesa 
+		(numarOrdine -2)
+		(label PiesaCurenta)
+		(rotire 0)
+		(casuta1DinPiesa 0 0 0)
+		(casuta2DinPiesa 0 1 0)
+		(casuta3DinPiesa 0 2 0)
+		(casuta4DinPiesa 1 0 0)
+		(casuta5DinPiesa 1 1 0)
+		(casuta6DinPiesa 1 2 0)
+		(casuta7DinPiesa 2 0 0)
+		(casuta8DinPiesa 2 1 0)
+		(casuta9DinPiesa 2 2 0)
+	)
+	
+	(piesa 
+		(numarOrdine -2)
+		(label PiesaCurenta)
+		(rotire 1)
+		(casuta1DinPiesa 0 0 0)
+		(casuta2DinPiesa 0 1 0)
+		(casuta3DinPiesa 0 2 0)
+		(casuta4DinPiesa 1 0 0)
+		(casuta5DinPiesa 1 1 0)
+		(casuta6DinPiesa 1 2 0)
+		(casuta7DinPiesa 2 0 0)
+		(casuta8DinPiesa 2 1 0)
+		(casuta9DinPiesa 2 2 0)
+	)
+
+	(piesa 
+		(numarOrdine -2)
+		(label PiesaCurenta)
+		(rotire 2)
+		(casuta1DinPiesa 0 0 0)
+		(casuta2DinPiesa 0 1 0)
+		(casuta3DinPiesa 0 2 0)
+		(casuta4DinPiesa 1 0 0)
+		(casuta5DinPiesa 1 1 0)
+		(casuta6DinPiesa 1 2 0)
+		(casuta7DinPiesa 2 0 0)
+		(casuta8DinPiesa 2 1 0)
+		(casuta9DinPiesa 2 2 0)
+	)
+	
+	(piesa 
+		(numarOrdine -2)
+		(label PiesaCurenta)
+		(rotire 3)
+		(casuta1DinPiesa 0 0 0)
+		(casuta2DinPiesa 0 1 0)
+		(casuta3DinPiesa 0 2 0)
+		(casuta4DinPiesa 1 0 0)
+		(casuta5DinPiesa 1 1 0)
+		(casuta6DinPiesa 1 2 0)
+		(casuta7DinPiesa 2 0 0)
+		(casuta8DinPiesa 2 1 0)
+		(casuta9DinPiesa 2 2 0)
+	)
+	
 	(piesa 
 		(numarOrdine -1)
 		(label PiesaAnterioara)
@@ -383,8 +645,20 @@
 	(checkEnding 0)
 	(x0_1 0)
 	(searchLineToDelete 0)
-	(upperLine 1)
 )
+(deffacts factsAna
+	(limitaCol1 19)
+	(limitaCol2 19)
+	(limitaCol3 19)
+	(limitaCol4 19)
+	(limitaCol5 19)
+	(limitaCol6 19)
+	(limitaCol7 19)
+	(limitaCol8 19)
+	(limitaCol9 19)
+	(limitaCol10 19)	
+)
+
 
 (defrule menu
 	?a <- (menu 1)
@@ -393,8 +667,7 @@
 	(printout t crlf "Meniu " crlf)
 	(printout t "1. Start Joc" crlf)
 	(printout t "2. Afisare piese" crlf)
-	(printout t "3. Adaugare piesa" crlf)`
-	(printout t "4. " crlf)
+	(printout t "3. Adaugare piesa" crlf)
 	(printout t "Alegere: ")
 	(assert (optiune (read)))
 	(assert (menu 0))
@@ -756,6 +1029,165 @@
 		(casuta8DinPiesa 2 1 ?valoare21)
 		(casuta9DinPiesa 2 2 ?valoare22)
 	)
+	(assert (genereazaRotiri))
+	
+	;#######new Acoperisuri
+	(assert (updateAcoperisuri))
+	(assert (maxLine 1))
+	(assert (currentLine 1))
+	(assert (currentColumn 1))
+)
+
+(defrule generareRotire0siModificaPiesaAnterioaraInCurenta
+	?b <- (genereazaRotiri)
+	(piesa 
+		(numarOrdine 0)
+		(casuta1DinPiesa 0 0 ?valoare00)
+		(casuta2DinPiesa 0 1 ?valoare01)
+		(casuta3DinPiesa 0 2 ?valoare02)
+		(casuta4DinPiesa 1 0 ?valoare10)
+		(casuta5DinPiesa 1 1 ?valoare11)
+		(casuta6DinPiesa 1 2 ?valoare12)
+		(casuta7DinPiesa 2 0 ?valoare20)
+		(casuta8DinPiesa 2 1 ?valoare21)
+		(casuta9DinPiesa 2 2 ?valoare22)
+	)
+	?a <- (piesa 
+		(numarOrdine -2)
+		(rotire 0)
+	)
+	?c <- (piesa 
+		(numarOrdine -1)
+	)
+	=>
+	(retract ?b)
+	(modify ?a 	
+		(casuta1DinPiesa 0 0 ?valoare02)
+		(casuta2DinPiesa 0 1 ?valoare12)
+		(casuta3DinPiesa 0 2 ?valoare22)
+		(casuta4DinPiesa 1 0 ?valoare01)
+		(casuta5DinPiesa 1 1 ?valoare11)
+		(casuta6DinPiesa 1 2 ?valoare21)
+		(casuta7DinPiesa 2 0 ?valoare00)
+		(casuta8DinPiesa 2 1 ?valoare10)
+		(casuta9DinPiesa 2 2 ?valoare20)
+	)	
+	(modify ?c	
+		(casuta1DinPiesa 0 0 ?valoare00)
+		(casuta2DinPiesa 0 1 ?valoare01)
+		(casuta3DinPiesa 0 2 ?valoare02)
+		(casuta4DinPiesa 1 0 ?valoare10)
+		(casuta5DinPiesa 1 1 ?valoare11)
+		(casuta6DinPiesa 1 2 ?valoare12)
+		(casuta7DinPiesa 2 0 ?valoare20)
+		(casuta8DinPiesa 2 1 ?valoare21)
+		(casuta9DinPiesa 2 2 ?valoare22)
+	)
+	(assert (genereazaPrimaRotire))
+)
+
+(defrule generareRotire1
+	?b <- (genereazaPrimaRotire)
+	(piesa 
+		(numarOrdine -2)
+		(rotire 0)
+		(casuta1DinPiesa 0 0 ?valoare00)
+		(casuta2DinPiesa 0 1 ?valoare01)
+		(casuta3DinPiesa 0 2 ?valoare02)
+		(casuta4DinPiesa 1 0 ?valoare10)
+		(casuta5DinPiesa 1 1 ?valoare11)
+		(casuta6DinPiesa 1 2 ?valoare12)
+		(casuta7DinPiesa 2 0 ?valoare20)
+		(casuta8DinPiesa 2 1 ?valoare21)
+		(casuta9DinPiesa 2 2 ?valoare22)
+	)
+	?a <- (piesa 
+		(numarOrdine -2)
+		(rotire 1)
+	)
+	=>
+	(retract ?b)
+	(modify ?a 	
+		(casuta1DinPiesa 0 0 ?valoare02)
+		(casuta2DinPiesa 0 1 ?valoare12)
+		(casuta3DinPiesa 0 2 ?valoare22)
+		(casuta4DinPiesa 1 0 ?valoare01)
+		(casuta5DinPiesa 1 1 ?valoare11)
+		(casuta6DinPiesa 1 2 ?valoare21)
+		(casuta7DinPiesa 2 0 ?valoare00)
+		(casuta8DinPiesa 2 1 ?valoare10)
+		(casuta9DinPiesa 2 2 ?valoare20)
+	)
+	(assert (genereazaADouaRotire))
+)
+
+(defrule generareRotire2
+	?b <- (genereazaADouaRotire)
+	(piesa 
+		(numarOrdine -2)
+		(rotire 1)
+		(casuta1DinPiesa 0 0 ?valoare00)
+		(casuta2DinPiesa 0 1 ?valoare01)
+		(casuta3DinPiesa 0 2 ?valoare02)
+		(casuta4DinPiesa 1 0 ?valoare10)
+		(casuta5DinPiesa 1 1 ?valoare11)
+		(casuta6DinPiesa 1 2 ?valoare12)
+		(casuta7DinPiesa 2 0 ?valoare20)
+		(casuta8DinPiesa 2 1 ?valoare21)
+		(casuta9DinPiesa 2 2 ?valoare22)
+	)
+	?a <- (piesa 
+		(numarOrdine -2)
+		(rotire 2)
+	)
+	=>
+	(retract ?b)
+	(modify ?a 	
+		(casuta1DinPiesa 0 0 ?valoare02)
+		(casuta2DinPiesa 0 1 ?valoare12)
+		(casuta3DinPiesa 0 2 ?valoare22)
+		(casuta4DinPiesa 1 0 ?valoare01)
+		(casuta5DinPiesa 1 1 ?valoare11)
+		(casuta6DinPiesa 1 2 ?valoare21)
+		(casuta7DinPiesa 2 0 ?valoare00)
+		(casuta8DinPiesa 2 1 ?valoare10)
+		(casuta9DinPiesa 2 2 ?valoare20)
+	)
+	(assert (genereazaATreiaRotire))
+)
+
+(defrule generareRotire3
+	?b <- (genereazaATreiaRotire)
+	(piesa 		
+		(numarOrdine -2)
+		(rotire 2)
+		(casuta1DinPiesa 0 0 ?valoare00)
+		(casuta2DinPiesa 0 1 ?valoare01)
+		(casuta3DinPiesa 0 2 ?valoare02)
+		(casuta4DinPiesa 1 0 ?valoare10)
+		(casuta5DinPiesa 1 1 ?valoare11)
+		(casuta6DinPiesa 1 2 ?valoare12)
+		(casuta7DinPiesa 2 0 ?valoare20)
+		(casuta8DinPiesa 2 1 ?valoare21)
+		(casuta9DinPiesa 2 2 ?valoare22)
+	)
+	?a <- (piesa 
+		(numarOrdine -2)
+		(rotire 3)
+	)
+	=>
+	(retract ?b)
+	(modify ?a 	
+		(casuta1DinPiesa 0 0 ?valoare02)
+		(casuta2DinPiesa 0 1 ?valoare12)
+		(casuta3DinPiesa 0 2 ?valoare22)
+		(casuta4DinPiesa 1 0 ?valoare01)
+		(casuta5DinPiesa 1 1 ?valoare11)
+		(casuta6DinPiesa 1 2 ?valoare21)
+		(casuta7DinPiesa 2 0 ?valoare00)
+		(casuta8DinPiesa 2 1 ?valoare10)
+		(casuta9DinPiesa 2 2 ?valoare20)
+	)
 	(assert (stergePiesaVecheDePeTabla))
 )
 
@@ -839,18 +1271,179 @@
 	(assert (afisareBoard))
 )
 
+(defrule limitaPiesa1 (declare (salience 2))
+	?addr <- (limitaPiesaTabla)
+	(piesa 
+		(numarOrdine 0)
+		(casuta1DinPiesa 0 0 ?val1)
+		(casuta2DinPiesa 0 1 ?val2)
+		(casuta3DinPiesa 0 2 ?val3)
+	)
+	(or
+		(test (eq ?val1 1))
+		(test (eq ?val2 1))
+		(test (eq ?val3 1))
+	)
+	(x0 ?value)
+	=>
+	(retract ?addr)
+	(assert (limitaSus ?value))
+	(printout t "limitapiesa: " ?value crlf)
+)	
+
+(defrule limitaPiesa2  (declare (salience 1))
+	?addr <- (limitaPiesaTabla)
+	(piesa 
+		(numarOrdine 0)
+		(casuta4DinPiesa 1 0 ?val4)
+		(casuta5DinPiesa 1 1 ?val5)
+		(casuta6DinPiesa 1 2 ?val6)
+	)
+	(or
+		(test (eq ?val4 1))
+		(test (eq ?val5 1))
+		(test (eq ?val6 1))
+	)
+	(x1 ?value)
+	=>
+	(retract ?addr)
+	(assert (limitaSus ?value))
+	(printout t "limitapiesa: " ?value crlf)
+)	
+
+(defrule limitaPiesa3
+	?addr <- (limitaPiesaTabla)
+	(piesa 
+		(numarOrdine 0)
+		(casuta7DinPiesa 2 0 ?val7)
+		(casuta8DinPiesa 2 1 ?val8)
+		(casuta9DinPiesa 2 2 ?val9)
+	)
+	(or
+		(test (eq ?val7 1))
+		(test (eq ?val8 1))
+		(test (eq ?val9 1))
+	)
+	(x2 ?value)
+	=>
+	(retract ?addr)
+	(assert (limitaSus ?value))
+	(printout t "limitapiesa: " ?value crlf)
+)	
+
+
+(defrule limitaColoana1
+	?a <- (limitaCol1 ?linie)
+	(board (i ?linie) (j 1) (val ?val1))
+	(test (eq ?val1 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol1 (- ?linie 1)))
+)
+
+(defrule limitaColoana2
+	?a <- (limitaCol2 ?linie)
+	(board (i ?linie) (j 2) (val ?val2))
+	(test (eq ?val2 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol2 (- ?linie 1)))
+)
+
+(defrule limitaColoana3
+	?a <- (limitaCol3 ?linie)
+	(board (i ?linie) (j 3) (val ?val3))
+	(test (eq ?val3 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol3 (- ?linie 1)))
+)
+
+(defrule limitaColoana4
+	?a <- (limitaCol4 ?linie)
+	(board (i ?linie) (j 4) (val ?val4))
+	(test (eq ?val4 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol4 (- ?linie 1)))
+)
+
+(defrule limitaColoana5
+	?a <- (limitaCol5 ?linie)
+	(board (i ?linie) (j 5) (val ?val5))
+	(test (eq ?val5 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol5 (- ?linie 1)))
+)
+
+(defrule limitaColoana6
+	?a <- (limitaCol6 ?linie)
+	(board (i ?linie) (j 6) (val ?val6))
+	(test (eq ?val6 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol6 (- ?linie 1)))
+)
+
+(defrule limitaColoana7
+	?a <- (limitaCol7 ?linie)
+	(board (i ?linie) (j 7) (val ?val7))
+	(test (eq ?val7 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol7 (- ?linie 1)))
+)
+
+(defrule limitaColoana8
+	?a <- (limitaCol8 ?linie)
+	(board (i ?linie) (j 8) (val ?val8))
+	(test (eq ?val8 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol8 (- ?linie 1)))
+)
+
+(defrule limitaColoana9
+	?a <- (limitaCol9 ?linie)
+	(board (i ?linie) (j 9) (val ?val9))
+	(test (eq ?val9 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol9 (- ?linie 1)))
+)
+
+(defrule limitaColoana10
+	?a <- (limitaCol10 ?linie)
+	(board (i ?linie) (j 10) (val ?val10))
+	(test (eq ?val10 0))
+	=>
+	(retract ?a)
+	(assert (limitaCol10 (- ?linie 1)))
+)
+
 (defrule piesaUrmatoare
 	(optiune 1)
 	?b <- (random ?rnd)
 	(numarPiese ?np)
 	?a <- (lastmove 1)
-	(checkEnding 0)
 	?l1 <- (x0 ?)
 	?l2 <- (x1 ?)
 	?l3 <- (x2 ?)
 	?l4 <- (y0 ?)
 	?l5 <- (y1 ?)
 	?l6 <- (y2 ?)
+
+	?a1 <- (limitaCol1 ?)
+	?a2 <- (limitaCol2 ?)
+	?a3 <- (limitaCol3 ?)
+	?a4 <- (limitaCol4 ?)
+	?a5 <- (limitaCol5 ?)
+	?a6 <- (limitaCol6 ?)
+	?a7 <- (limitaCol7 ?)
+	?a8 <- (limitaCol8 ?)
+	?a9 <- (limitaCol9 ?)
+	?a10 <- (limitaCol10 ?)
 	=>
 	(retract ?a)
 	(retract ?b)
@@ -875,12 +1468,45 @@
 	(assert (y2next -1))
 	(assert (random (random 1 ?np)))
 	(assert (updatePiesaAnterioara))
+
+	(retract ?a1)
+	(retract ?a2)
+	(retract ?a3)
+	(retract ?a4)
+	(retract ?a5)
+	(retract ?a6)
+	(retract ?a7)
+	(retract ?a8)
+	(retract ?a9)
+	(retract ?a10)
+	(assert (limitaCol1 19))
+	(assert (limitaCol2 19))
+	(assert (limitaCol3 19))
+	(assert (limitaCol4 19))
+	(assert (limitaCol5 19))
+	(assert (limitaCol6 19))
+	(assert (limitaCol7 19))
+	(assert (limitaCol8 19))
+	(assert (limitaCol9 19))
+	(assert (limitaCol10 19))
+	(assert (limitaPiesaTabla))
 )
 
 (defrule randomInitial
 	(optiune 1)
 	(numarPiese ?np)
 	(not (random ?))
+
+	?a1 <- (limitaCol1 ?)
+	?a2 <- (limitaCol2 ?)
+	?a3 <- (limitaCol3 ?)
+	?a4 <- (limitaCol4 ?)
+	?a5 <- (limitaCol5 ?)
+	?a6 <- (limitaCol6 ?)
+	?a7 <- (limitaCol7 ?)
+	?a8 <- (limitaCol8 ?)
+	?a9 <- (limitaCol9 ?)
+	?a10 <- (limitaCol10 ?)
 	=>
 	(assert (piesaCurenta (random 1 ?np)))
 	(assert (x0 20))
@@ -897,6 +1523,28 @@
 	(assert (y2next -1))
 	(assert (random (random 1 ?np)))
 	(assert (updatePiesaAnterioara))
+
+	(retract ?a1)
+	(retract ?a2)
+	(retract ?a3)
+	(retract ?a4)
+	(retract ?a5)
+	(retract ?a6)
+	(retract ?a7)
+	(retract ?a8)
+	(retract ?a9)
+	(retract ?a10)
+	(assert (limitaCol1 19))
+	(assert (limitaCol2 19))
+	(assert (limitaCol3 19))
+	(assert (limitaCol4 19))
+	(assert (limitaCol5 19))
+	(assert (limitaCol6 19))
+	(assert (limitaCol7 19))
+	(assert (limitaCol8 19))
+	(assert (limitaCol9 19))
+	(assert (limitaCol10 19))
+	(assert (limitaPiesaTabla))
 )
 
 
@@ -908,6 +1556,206 @@
 ;	(assert (insereazaPiesaUser (read)))
 ;	(retract ?a)
 ;)
+
+
+;######## begin acoperisuri ###########
+
+(defrule createAcoperisCol_stopCondition_specialCase
+	(updateAcoperisuri)
+	?currentLineFact <- (currentLine ?currentLine)
+	?currentColumnFact <- (currentColumn ?currentColumn)
+	?maxLineFact <- (maxLine ?maxLine)
+	?currentPiece <- (piesaAcoperis
+						(column ?currentColumn)
+					)
+	(test (eq ?currentLine 22))
+	(test (< ?maxLine 3))
+	
+	=>
+	(printout t "###########" crlf)
+	(printout t "Column = " ?currentColumn crlf)
+	(printout t "Max line = "  4 crlf)
+	(printout t "###########" crlf)
+	
+	(modify ?currentPiece
+	
+		(casuta1DinPiesa (- 4 3) ?currentColumn  0)
+		(casuta2DinPiesa (- 4 3) (+ ?currentColumn 1) 0)
+		(casuta3DinPiesa (- 4 3) (+ ?currentColumn 2) 0)
+		(casuta4DinPiesa (- 4 2) ?currentColumn 0)
+		(casuta5DinPiesa (- 4 2) (+ ?currentColumn 1) 0)
+		(casuta6DinPiesa (- 4 2) (+ ?currentColumn 2) 0)
+		(casuta7DinPiesa (- 4 1) ?currentColumn 0)
+		(casuta8DinPiesa (- 4 1) (+ ?currentColumn 1) 0)
+		(casuta9DinPiesa (- 4 1) (+ ?currentColumn 2) 0)
+		(casuta10DinPiesa 4 ?currentColumn 0)
+		(casuta11DinPiesa 4 (+ ?currentColumn 1) 0)
+		(casuta12DinPiesa 4 (+ ?currentColumn 2) 0)
+	)
+	
+	
+	(retract ?currentLineFact)
+	(assert (currentLine 1))
+	
+	(retract ?currentColumnFact)
+	(assert (currentColumn (+ ?currentColumn 1)))
+	
+	(retract ?maxLineFact)
+	(assert (maxLine 1))
+	
+)
+
+;(defrule stopCondition_continuare
+;	(aux_line1 ?line1)
+;	(aux_column1 ?column1)
+;	(aux_line2 ?line2)
+;	(aux_column2 ?column2)
+;	(aux_line3 ?line3)
+;	(aux_column3 ?column3)
+;	(aux_line4 ?line4)
+;	(aux_column4 ?column4)
+;	(aux_line5 ?line5)
+;	(aux_column5 ?column5)
+;	(aux_line6 ?line6)
+;	(aux_column6 ?column6)
+;	(aux_line7 ?line7)
+;	(aux_column7 ?column7)
+;	(aux_line8 ?line8)
+;	(aux_column8 ?column8)
+;	(aux_line9 ?line9)
+;	(aux_column9 ?column9)
+;	(aux_line10 ?line10)
+;	(aux_column10 ?column10)
+;	(aux_line11 ?line11)
+;	(aux_column11 ?column11)
+;	(aux_line12 ?line12)
+;	(aux_column12 ?column12)
+;	
+;	(board (i ?aux_line1) (j ?aux_column1) (val ?casuta1))
+;	(board (i ?aux_line2) (j ?aux_column2) (val ?casuta2))
+;	(board (i ?aux_line3) (j ?aux_column3) (val ?casuta3))
+;	(board (i ?aux_line4) (j ?aux_column4) (val ?casuta4))
+;	(board (i ?aux_line5) (j ?aux_column5) (val ?casuta5))
+;	(board (i ?aux_line6) (j ?aux_column6) (val ?casuta6))
+;	(board (i ?aux_line7) (j ?aux_column7) (val ?casuta7))
+;	(board (i ?aux_line8) (j ?aux_column8) (val ?casuta8))
+;	(board (i ?aux_line9) (j ?aux_column9) (val ?casuta9))
+;	(board (i ?aux_line10) (j ?aux_column10) (val ?casuta10))
+;	(board (i ?aux_line11) (j ?aux_column11) (val ?casuta11))
+;	(board (i ?aux_line12) (j ?aux_column12) (val ?casuta12))
+;	
+;	=>
+;	
+;	(printout t "bla bla bla blab!!!! ", ?aux_line1 crlf)
+;	
+;)
+
+(defrule createAcoperisCol_stopCondition
+	(updateAcoperisuri)
+	?currentLineFact <- (currentLine ?currentLine)
+	?currentColumnFact <- (currentColumn ?currentColumn)
+	?maxLineFact <- (maxLine ?maxLine)
+	?currentPiece <- (piesaAcoperis
+						(column ?currentColumn)
+					)
+	(test (eq ?currentLine 22))
+	
+	=>
+	(printout t "###########" crlf)
+	(printout t "Column = " ?currentColumn crlf)
+	(printout t "Max line = "  ?maxLine crlf)
+	(printout t "###########" crlf)
+	
+	
+	(assert (aux_line1 (- ?maxLine 2)))
+	(assert (aux_column1 ?currentColumn))
+	
+	(assert (aux_line2 (- ?maxLine 2)))
+	(assert (aux_column2 (+ ?currentColumn 1)))
+	
+	(assert (aux_line3 (- ?maxLine 2)))
+	(assert (aux_column3 (+ ?currentColumn 2)))
+	
+	
+	(assert (aux_line4 (- ?maxLine 1)))
+	(assert (aux_column4 ?currentColumn))
+	
+	(assert (aux_line5 (- ?maxLine 1)))
+	(assert (aux_column5 (+ ?currentColumn 1)))
+	
+	(assert (aux_line6 (- ?maxLine 1)))
+	(assert (aux_column6 (+ ?currentColumn 2)))
+	
+	
+	(assert (aux_line7 ?maxLine))
+	(assert (aux_column7 ?currentColumn))
+	
+	(assert (aux_line8 ?maxLine))
+	(assert (aux_column8 (+ ?currentColumn 1)))
+	
+	(assert (aux_line9 ?maxLine))
+	(assert (aux_column9 (+ ?currentColumn 2)))
+	
+	
+	
+	(assert (aux_line10 (+ ?maxLine 1)))
+	(assert (aux_column10 ?currentColumn))
+	
+	(assert (aux_line11 (+ ?maxLine 1)))
+	(assert (aux_column11 (+ ?currentColumn 1)))
+	
+	(assert (aux_line12 (+ ?maxLine 1)))
+	(assert (aux_column12 (+ ?currentColumn 2)))
+	
+	
+	(retract ?currentLineFact)
+	(assert (currentLine 1))
+	
+	(retract ?currentColumnFact)
+	(assert (currentColumn (+ ?currentColumn 1)))
+	
+	(retract ?maxLineFact)
+	(assert (maxLine 1))
+	
+)
+
+(defrule createAcoperisCol
+	(updateAcoperisuri)
+	?currentLineFact <- (currentLine ?currentLine)
+	(currentColumn ?currentColumn)
+	?maxLineFact <- (maxLine ?maxLine)
+	(board (i ?currentLine) (j ?currentColumn) (val ?val))
+	(test (eq ?val 1))
+	=>
+	
+	(retract ?currentLineFact)
+	(assert (currentLine (+ ?currentLine 1)))
+	
+	(retract ?maxLineFact)
+	(assert (maxLine (+ ?currentLine 1)))
+)
+
+(defrule neq_createAcoperisCol
+	(updateAcoperisuri)
+	?currentLineFact <- (currentLine ?currentLine)
+	(currentColumn ?currentColumn)
+	?maxLineFact <- (maxLine ?maxLine)
+	(board (i ?currentLine) (j ?currentColumn) (val ?val))
+	(test (eq ?val 0))
+	=>
+	(retract ?currentLineFact)
+	(assert (currentLine (+ ?currentLine 1)))
+)
+
+
+;######## end acoperisuri  ###########
+
+
+
+
+
+
+
 
 (defrule rule_insereazaPiesaUser
 	?c <- (insereazaPiesaUser ?simbol)
@@ -1838,23 +2686,24 @@
 
 (defrule make_merge (declare (salience 4))
 	?a <- (checkEnding 1)
-	(lastmove 1)
+	?b <- (lastmove 1)
 	?c <- (searchLineToDelete ?)
 	=>
 	(retract ?a)
 	(retract ?c)
+	(assert (checkEnding 0))
 	(assert (iterator 1))
 	(assert (searchLineToDelete 1))
-	(assert (startDelete 0))
-	(printout t "make_merge" crlf)
 )
+
+
 
 ;;start delete_line
 
 (defrule checkLineToDeleteCorrect
-	?a <- (searchLineToDelete 1)
-	?c <- (iterator ?it)
-	(test (< ?it 22))
+	(searchLineToDelete 1)
+	(iterator ?it)
+	(test (< ?it 23))
 	(board (i ?it) (j 1) (val ?v1))
 	(board (i ?it) (j 2) (val ?v2))
 	(board (i ?it) (j 3) (val ?v3))
@@ -1867,20 +2716,16 @@
 	(board (i ?it) (j 10) (val ?v10))
 	(and (test (eq ?v1 1)) (test (eq ?v2 1)) (test (eq ?v3 1)) (test (eq ?v4 1)) (test (eq ?v5 1)) (test (eq ?v6 1)) (test (eq ?v7 1)) (test (eq ?v8 1)) (test (eq ?v9 1)) (test (eq ?v10 1)))
 	=>
-	(retract ?a)
-	(retract ?c)
-	(assert (searchLineToDelete 0))
 	(assert (foundLine 1))
 	(assert (deleteIt ?it))
 	(assert (lineToDelete ?it))
-	(printout t "Trebuie sa stergem linia " ?it crlf)
 )
 
 
 (defrule checkLineToDeleteFail
 	(searchLineToDelete 1)
 	?a <- (iterator ?it)
-	(test (< ?it 22))
+	(test (< ?it 23))
 	(board (i ?it) (j 1) (val ?v1))
 	(board (i ?it) (j 2) (val ?v2))
 	(board (i ?it) (j 3) (val ?v3))
@@ -1894,56 +2739,34 @@
 	(or (test (eq ?v1 0)) (test (eq ?v2 0)) (test (eq ?v3 0)) (test (eq ?v4 0)) (test (eq ?v5 0)) (test (eq ?v6 0)) (test (eq ?v7 0)) (test (eq ?v8 0)) (test (eq ?v9 0)) (test (eq ?v10 0)))
 	=>
 	(retract ?a)
-	(printout t ?v1 " " ?v2 " " ?v3 " " ?v4 " " ?v5 " " ?v6 " " ?v7 " " ?v8 " " ?v9 " " ?v10 crlf)
+	(printout t ?v1 " " ?v2 " " ?v3 " " ?v4 " " ?v5 " " ?v6 " " ?v7 " " ?v8 " " ?v9 " " ?v10 clrf)
 	(assert (iterator (+ ?it 1)))
 )
 
 (defrule checkLineToDeleteEnd
-	?c <- (searchLineToDelete 1)
+	(searchLineToDelete 1)
 	?a <- (iterator ?it)
-	(test (eq ?it 22))
+	(test (eq ?it 23))
 	=>
 	(retract ?a)
-	(retract ?c)
-	(assert (searchLineToDelete 0))
-	(assert (checkEnding 0))
-	(assert (upperLine 1))
-	(printout t "checkLineToDeleteEnd" crlf )
+	(assert (deleteIt ?it))
+	(assert (isearchLineToDelete 0))
 )
-
-
 
 (defrule deleteLinesStart
 	(searchLineToDelete 0)
 	(foundLine 1)
 	?a <- (lineToDelete ?it)
-	?b <- (deleteIt ?)
+	?b <- (iterator ?)
 	?c <- (startDelete 0)
 	(test (< ?it 23))
 	=>
 	(retract ?a)
 	(retract ?b)
 	(retract ?c)
-	(assert (deleteIt ?it))
-	(assert (startDelete 2))
-	(printout t "deleteLinesStart" crlf )
-)
-
-(defrule incrementDeleteIt
-	(searchLineToDelete 0)
-	(foundLine 1)
-	?a <- (startDelete 2)
-	(deleteIt ?it)
-	?c <- (upperLine 1)
-	=>
-	(retract ?a)
-	(retract ?c)
-	(assert (upperLine (+ ?it 1)))
+	(assert (iterator ?it))
 	(assert (startDelete 1))
-	(printout t "incrementDeleteIt" crlf )
-
 )
-
 
 
 (defrule deleteLines
@@ -1951,7 +2774,6 @@
 	(foundLine 1)
 	(startDelete 1)
 	?a <- (deleteIt ?it)
-	?b <- (upperLine ?upperLine)
 	(test (< ?it 22))
 	?c1 <- (board (i ?it) (j 1) (val ?v1))
 	?c2 <- (board (i ?it) (j 2) (val ?v2))
@@ -1963,7 +2785,7 @@
 	?c8 <- (board (i ?it) (j 8) (val ?v8))
 	?c9 <- (board (i ?it) (j 9) (val ?v9))
 	?c10 <- (board (i ?it) (j 10) (val ?v10))
-
+	?upperLine <- (+ ?it 1)
 	(board (i ?upperLine) (j 1) (val ?s1))
 	(board (i ?upperLine) (j 2) (val ?s2))
 	(board (i ?upperLine) (j 3) (val ?s3))
@@ -1986,17 +2808,15 @@
 	(modify ?c9 (val ?s9))
 	(modify ?c10 (val ?s10))
 	(retract ?a)
-	(retract ?b)
-	(assert (upperLine (+ ?upperLine 1)))
-	(assert (deleteIt (+ ?it 1)))
-	(printout t "deleteLines" crlf )
+	(assert (iterator (+ ?it 1)))
 )
 
 (defrule deleteLinesEnd
 	(searchLineToDelete 0)
-	?f <- (foundLine 1)
+	(foundLine 1)
+	(startDelete 1)
 	?c <- (startDelete 1)
-	?di <- (deleteIt ?it)
+	(deleteIt ?it)
 	(test (eq ?it 22))
 	?c1 <- (board (i ?it) (j 1) (val ?v1))
 	?c2 <- (board (i ?it) (j 2) (val ?v2))
@@ -2021,16 +2841,10 @@
 	(modify ?c10 (val 0))
 	(retract ?c)
 	(assert (startDelete 0))
-	(assert (checkEnding 0))
-	(retract ?di)
-	(retract ?f)
-	(printout t "deleteLinesEnd" crlf )
 )
 
 
-
 ;;end delete_line
-
 
 (defrule afisarePiese (declare (salience 1))
 	(optiune 2)
