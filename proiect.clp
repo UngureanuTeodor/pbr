@@ -820,7 +820,7 @@
 	(assert (genereazaRotiri))
 )
 
-(defrule generareRotire0siModificaPiesaAnterioaraInCurenta
+(defrule generareRotire0
 	?b <- (genereazaRotiri)
 	(piesa 
 		(numarOrdine 0)
@@ -838,11 +838,7 @@
 		(numarOrdine -2)
 		(rotire 0)
 	)
-	?c <- (piesa 
-		(numarOrdine -1)
-	)
 	=>
-	(retract ?b)
 	(modify ?a 	
 		(casuta1DinPiesa 0 0 ?valoare02)
 		(casuta2DinPiesa 0 1 ?valoare12)
@@ -853,17 +849,6 @@
 		(casuta7DinPiesa 2 0 ?valoare00)
 		(casuta8DinPiesa 2 1 ?valoare10)
 		(casuta9DinPiesa 2 2 ?valoare20)
-	)	
-	(modify ?c	
-		(casuta1DinPiesa 0 0 ?valoare00)
-		(casuta2DinPiesa 0 1 ?valoare01)
-		(casuta3DinPiesa 0 2 ?valoare02)
-		(casuta4DinPiesa 1 0 ?valoare10)
-		(casuta5DinPiesa 1 1 ?valoare11)
-		(casuta6DinPiesa 1 2 ?valoare12)
-		(casuta7DinPiesa 2 0 ?valoare20)
-		(casuta8DinPiesa 2 1 ?valoare21)
-		(casuta9DinPiesa 2 2 ?valoare22)
 	)
 	(assert (genereazaPrimaRotire))
 )
@@ -888,7 +873,6 @@
 		(rotire 1)
 	)
 	=>
-	(retract ?b)
 	(modify ?a 	
 		(casuta1DinPiesa 0 0 ?valoare02)
 		(casuta2DinPiesa 0 1 ?valoare12)
@@ -923,7 +907,6 @@
 		(rotire 2)
 	)
 	=>
-	(retract ?b)
 	(modify ?a 	
 		(casuta1DinPiesa 0 0 ?valoare02)
 		(casuta2DinPiesa 0 1 ?valoare12)
@@ -958,7 +941,6 @@
 		(rotire 3)
 	)
 	=>
-	(retract ?b)
 	(modify ?a 	
 		(casuta1DinPiesa 0 0 ?valoare02)
 		(casuta2DinPiesa 0 1 ?valoare12)
