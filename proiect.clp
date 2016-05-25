@@ -1674,6 +1674,7 @@
 	(test (< ?maxLine 3))
 	
 	=>
+	
 	(printout t "@@@@@@@@@@@" crlf)
 	(printout t "Column = " ?currentColumn crlf)
 	(printout t "Max line = "  4 crlf)
