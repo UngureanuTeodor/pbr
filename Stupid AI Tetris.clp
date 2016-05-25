@@ -685,6 +685,7 @@
 		(casuta8DinPiesa 2 1 ?valoare21)
 		(casuta9DinPiesa 2 2 ?valoare22)
 	)
+	?move <- (moveList ?curentMove $?nextMoves)
 	=>
 	(retract ?a)
 	(printout t crlf "      TETRIS" crlf crlf)
@@ -715,7 +716,9 @@
 	(printout t "Apasa a pentru mutare stanga" crlf)
 	(printout t "Apasa d pentru mutare dreapta" crlf)
 	(printout t "Apasa s pentru mutare jos" crlf)
-	(assert (literaCitita (read)))
+	(retract ?move)
+	(assert (moveList $?nextMoves))
+	(assert (literaCitita ?curentMove))
 	(assert (initializareNexturi))
 )
 
@@ -924,6 +927,7 @@
 	(assert (y2next -1))
 	(assert (random (random 1 ?np)))
 	(assert (updatePiesaAnterioara))
+	(assert (createMoves))
 )
 
 (defrule randomInitial
@@ -1717,6 +1721,115 @@
 	(assert (lastmove 1))
 )
 
+(defrule checkEndingLF
+	?a <- (checkEnding 1)
+	(piesa 
+		(numarOrdine 0)
+		(casuta1DinPiesa 0 0 ?valoare00)
+		(casuta2DinPiesa 0 1 ?valoare01)
+		(casuta3DinPiesa 0 2 ?valoare02)
+		(casuta4DinPiesa 1 0 ?valoare10)
+		(casuta5DinPiesa 1 1 ?valoare11)
+		(casuta6DinPiesa 1 2 ?valoare12)
+		(casuta7DinPiesa 2 0 ?valoare20)
+		(casuta8DinPiesa 2 1 ?valoare21)
+		(casuta9DinPiesa 2 2 ?valoare22)
+	)
+	(and (test (eq ?valoare00 1))
+		 (test (eq ?valoare01 1))
+		 (test (eq ?valoare02 0))
+	)
+	(x0 ?x0)
+	(y0 ?y0)
+	(y1 ?y1)
+	(y2 ?y2)
+	(x0_1 ?x0_1)
+	(board (i ?x0_1) (j ?y0) (val ?p1))
+	(board (i ?x0_1) (j ?y1) (val ?p2))
+	(or (test (eq ?p1 1)) (test (eq ?p2 1)))
+	=>
+	(assert (lastmove 1))
+)
+
+
+(defrule checkEndingLFF
+	?a <- (checkEnding 1)
+	(piesa 
+		(numarOrdine 0)
+		(casuta1DinPiesa 0 0 ?valoare00)
+		(casuta2DinPiesa 0 1 ?valoare01)
+		(casuta3DinPiesa 0 2 ?valoare02)
+		(casuta4DinPiesa 1 0 ?valoare10)
+		(casuta5DinPiesa 1 1 ?valoare11)
+		(casuta6DinPiesa 1 2 ?valoare12)
+		(casuta7DinPiesa 2 0 ?valoare20)
+		(casuta8DinPiesa 2 1 ?valoare21)
+		(casuta9DinPiesa 2 2 ?valoare22)
+	)
+	(test (eq ?valoare01 1))
+	(x0 ?x0)
+	(y0 ?y0)
+	(y1 ?y1)
+	(y2 ?y2)
+	(x0_1 ?x0_1)
+	(board (i ?x0_1) (j ?y1) (val ?p1))
+	(test (eq ?p1 1))
+	=>
+	(assert (lastmove 1))
+)
+
+(defrule checkEndingLFE
+	?a <- (checkEnding 1)
+	(piesa 
+		(numarOrdine 0)
+		(casuta1DinPiesa 0 0 ?valoare00)
+		(casuta2DinPiesa 0 1 ?valoare01)
+		(casuta3DinPiesa 0 2 ?valoare02)
+		(casuta4DinPiesa 1 0 ?valoare10)
+		(casuta5DinPiesa 1 1 ?valoare11)
+		(casuta6DinPiesa 1 2 ?valoare12)
+		(casuta7DinPiesa 2 0 ?valoare20)
+		(casuta8DinPiesa 2 1 ?valoare21)
+		(casuta9DinPiesa 2 2 ?valoare22)
+	)
+	(test (eq ?valoare00 1))
+	(x0 ?x0)
+	(y0 ?y0)
+	(y1 ?y1)
+	(y2 ?y2)
+	(x0_1 ?x0_1)
+	(board (i ?x0_1) (j ?y0) (val ?p1))
+	(test (eq ?p1 1))
+	=>
+	(assert (lastmove 1))
+)
+
+(defrule checkEndingLFR
+	?a <- (checkEnding 1)
+	(piesa 
+		(numarOrdine 0)
+		(casuta1DinPiesa 0 0 ?valoare00)
+		(casuta2DinPiesa 0 1 ?valoare01)
+		(casuta3DinPiesa 0 2 ?valoare02)
+		(casuta4DinPiesa 1 0 ?valoare10)
+		(casuta5DinPiesa 1 1 ?valoare11)
+		(casuta6DinPiesa 1 2 ?valoare12)
+		(casuta7DinPiesa 2 0 ?valoare20)
+		(casuta8DinPiesa 2 1 ?valoare21)
+		(casuta9DinPiesa 2 2 ?valoare22)
+	)
+	(test (eq ?valoare02 1))
+	(x0 ?x0)
+	(y0 ?y0)
+	(y1 ?y1)
+	(y2 ?y2)
+	(x0_1 ?x0_1)
+	(board (i ?x0_1) (j ?y2) (val ?p1))
+	(test (eq ?p1 1))
+	=>
+	(assert (lastmove 1))
+)
+
 (defrule checkEndingS1
 	?a <- (checkEnding 1)
 	(piesa 
@@ -1943,7 +2056,7 @@
 	(x0_1 ?x0_1)
 	(board (i ?x0_1) (j ?y1) (val ?p1))
 	(board (i ?x0) (j ?y2) (val ?p2))
-	(and (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?x0 1)))
+	(or (test (eq ?p1 1))  (test (eq ?p2 1)) (test (eq ?x0 1)))
 	=>
 	(assert (lastmove 1))
 )
@@ -2258,4 +2371,71 @@
 	)
 	(assert (numarPiese ?numarPieseNou))
 	(assert (menu 1))
+)
+
+;; apelam cand punem o piesa pe tabla
+(deffacts AI
+	(moveList)
+	(lastmovedone 1)
+	(createMoves)
+)
+
+(defrule miscare1
+	?a <- (moveList $?)
+	?b <- (lastmovedone 5)
+	?c <- (createMoves)
+	=>
+	(retract ?a)
+	(retract ?c)
+	(retract ?b)
+	(assert (lastmovedone 1))
+	(assert (moveList r a a a s s s s s s s s s s s s s s s s s s s s s s))
+)
+
+(defrule miscare2
+	?a <- (moveList $?)
+	?b <- (lastmovedone 1)
+	?c <- (createMoves)
+	=>
+	(retract ?a)
+	(retract ?b)
+	(retract ?c)
+	(assert (lastmovedone 2))
+	(assert (moveList r a a s s s s s s s s s s s s s s s s s s s s s s))
+)
+
+(defrule miscare3
+	?a <- (moveList $?)
+	?b <- (lastmovedone 2)
+	?c <- (createMoves)
+	=>
+	(retract ?a)
+	(retract ?b)
+	(retract ?c)
+	(assert (lastmovedone 3))
+	(assert (moveList r s s s s s s s s s s s s s s s s s s s s s s))
+)
+
+(defrule miscare4
+	?a <- (moveList $?)
+	?b <- (lastmovedone 3)
+	?c <- (createMoves)
+	=>
+	(retract ?a)
+	(retract ?b)
+	(retract ?c)
+	(assert (lastmovedone 4))
+	(assert (moveList d d s s s s s s s s s s s s s s s s s s s s s s))
+)
+
+(defrule miscare5
+	?a <- (moveList $?)
+	?b <- (lastmovedone 4)
+	?c <- (createMoves)
+	=>
+	(retract ?a)
+	(retract ?b)
+	(retract ?c)
+	(assert (lastmovedone 5))
+	(assert (moveList d d d s s s s s s s s s s s s s s s s s s s s s s))
 )
