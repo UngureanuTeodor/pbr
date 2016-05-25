@@ -1560,6 +1560,108 @@
 
 ;######## begin acoperisuri ###########
 
+(defrule stopCondition_continuare (declare (salience 100))
+	?a1 <- (aux_line1 ?line1)
+	?b1 <- (aux_column1 ?column1)
+	?a2 <- (aux_line2 ?line2)
+	?b2 <- (aux_column2 ?column2)
+	?a3 <- (aux_line3 ?line3)
+	?b3 <- (aux_column3 ?column3)
+	?a4 <- (aux_line4 ?line4)
+	?b4 <- (aux_column4 ?column4)
+	?a5 <- (aux_line5 ?line5)
+	?b5 <- (aux_column5 ?column5)
+	?a6 <- (aux_line6 ?line6)
+	?b6 <- (aux_column6 ?column6)
+	?a7 <- (aux_line7 ?line7)
+	?b7 <- (aux_column7 ?column7)
+	?a8 <- (aux_line8 ?line8)
+	?b8 <- (aux_column8 ?column8)
+	?a9 <- (aux_line9 ?line9)
+	?b9 <- (aux_column9 ?column9)
+	?a10 <- (aux_line10 ?line10)
+	?b10 <- (aux_column10 ?column10)
+	?a11 <- (aux_line11 ?line11)
+	?b11 <- (aux_column11 ?column11)
+	?a12 <- (aux_line12 ?line12)
+	?b12 <- (aux_column12 ?column12)
+	
+	(board (i ?line1) (j ?column1) (val ?casuta1))
+	(board (i ?line2) (j ?column2) (val ?casuta2))
+	(board (i ?line3) (j ?column3) (val ?casuta3))
+	(board (i ?line4) (j ?column4) (val ?casuta4))
+	(board (i ?line5) (j ?column5) (val ?casuta5))
+	(board (i ?line6) (j ?column6) (val ?casuta6))
+	(board (i ?line7) (j ?column7) (val ?casuta7))
+	(board (i ?line8) (j ?column8) (val ?casuta8))
+	(board (i ?line9) (j ?column9) (val ?casuta9))
+	(board (i ?line10) (j ?column10) (val ?casuta10))
+	(board (i ?line11) (j ?column11) (val ?casuta11))
+	(board (i ?line12) (j ?column12) (val ?casuta12))
+	
+	?currentLineFact <- (currentLine ?currentLine)
+	?currentColumnFact <- (currentColumn ?currentColumn)
+	?maxLineFact <- (maxLine ?maxLine)
+	?currentPiece <- (piesaAcoperis
+						(column ?currentColumn)
+					)
+	
+	=>
+	
+	(printout t "$$$$$$$$$$$$$ current column =  " ?currentColumn crlf)
+	
+	(modify ?currentPiece
+	
+		(casuta1DinPiesa ?line1 ?column1  ?casuta1)
+		(casuta2DinPiesa ?line2 ?column2  ?casuta2)
+		(casuta3DinPiesa ?line3 ?column3  ?casuta3)
+		(casuta4DinPiesa ?line4 ?column4  ?casuta4)
+		(casuta5DinPiesa ?line5 ?column5  ?casuta5)
+		(casuta6DinPiesa ?line6 ?column6  ?casuta6)
+		(casuta7DinPiesa ?line7 ?column7  ?casuta7)
+		(casuta8DinPiesa ?line8 ?column8  ?casuta8)
+		(casuta9DinPiesa ?line9 ?column9  ?casuta9)
+		(casuta10DinPiesa ?line10 ?column10  ?casuta10)
+		(casuta11DinPiesa ?line11 ?column11  ?casuta11)
+		(casuta12DinPiesa ?line12 ?column12  ?casuta12)
+	)
+	
+	
+	(retract ?a1)
+	(retract ?b1)
+	(retract ?a2)
+	(retract ?b2)
+	(retract ?a3)
+	(retract ?b3)
+	(retract ?a4)
+	(retract ?b4)
+	(retract ?a5)
+	(retract ?b5)
+	(retract ?a6)
+	(retract ?b6)
+	(retract ?a7)
+	(retract ?b7)
+	(retract ?a8)
+	(retract ?b8)
+	(retract ?a9)
+	(retract ?b9)
+	(retract ?a10)
+	(retract ?b10)
+	(retract ?a11)
+	(retract ?b11)
+	(retract ?a12)
+	(retract ?b12)
+	
+	(retract ?currentLineFact)
+	(assert (currentLine 1))
+	
+	(retract ?currentColumnFact)
+	(assert (currentColumn (+ ?currentColumn 1)))
+	
+	(retract ?maxLineFact)
+	(assert (maxLine 1))
+)
+
 (defrule createAcoperisCol_stopCondition_specialCase
 	(updateAcoperisuri)
 	?currentLineFact <- (currentLine ?currentLine)
@@ -1572,10 +1674,10 @@
 	(test (< ?maxLine 3))
 	
 	=>
-	(printout t "###########" crlf)
+	(printout t "@@@@@@@@@@@" crlf)
 	(printout t "Column = " ?currentColumn crlf)
 	(printout t "Max line = "  4 crlf)
-	(printout t "###########" crlf)
+	(printout t "@@@@@@@@@@@" crlf)
 	
 	(modify ?currentPiece
 	
@@ -1593,62 +1695,46 @@
 		(casuta12DinPiesa 4 (+ ?currentColumn 2) 0)
 	)
 	
+	(assert (aux_line1 1))
+	(assert (aux_column1 ?currentColumn))
 	
-	(retract ?currentLineFact)
-	(assert (currentLine 1))
+	(assert (aux_line2 1))
+	(assert (aux_column2 (+ ?currentColumn 1)))
 	
-	(retract ?currentColumnFact)
-	(assert (currentColumn (+ ?currentColumn 1)))
+	(assert (aux_line3 1))
+	(assert (aux_column3 (+ ?currentColumn 2)))
 	
-	(retract ?maxLineFact)
-	(assert (maxLine 1))
 	
+	(assert (aux_line4 2))
+	(assert (aux_column4 ?currentColumn))
+	
+	(assert (aux_line5 2))
+	(assert (aux_column5 (+ ?currentColumn 1)))
+	
+	(assert (aux_line6 2))
+	(assert (aux_column6 (+ ?currentColumn 2)))
+	
+	
+	(assert (aux_line7 3))
+	(assert (aux_column7 ?currentColumn))
+	
+	(assert (aux_line8 3))
+	(assert (aux_column8 (+ ?currentColumn 1)))
+	
+	(assert (aux_line9 3))
+	(assert (aux_column9 (+ ?currentColumn 2)))
+	
+	
+	(assert (aux_line10 4))
+	(assert (aux_column10 ?currentColumn))
+	
+	(assert (aux_line11 4))
+	(assert (aux_column11 (+ ?currentColumn 1)))
+	
+	(assert (aux_line12 4))
+	(assert (aux_column12 (+ ?currentColumn 2)))
 )
 
-;(defrule stopCondition_continuare
-;	(aux_line1 ?line1)
-;	(aux_column1 ?column1)
-;	(aux_line2 ?line2)
-;	(aux_column2 ?column2)
-;	(aux_line3 ?line3)
-;	(aux_column3 ?column3)
-;	(aux_line4 ?line4)
-;	(aux_column4 ?column4)
-;	(aux_line5 ?line5)
-;	(aux_column5 ?column5)
-;	(aux_line6 ?line6)
-;	(aux_column6 ?column6)
-;	(aux_line7 ?line7)
-;	(aux_column7 ?column7)
-;	(aux_line8 ?line8)
-;	(aux_column8 ?column8)
-;	(aux_line9 ?line9)
-;	(aux_column9 ?column9)
-;	(aux_line10 ?line10)
-;	(aux_column10 ?column10)
-;	(aux_line11 ?line11)
-;	(aux_column11 ?column11)
-;	(aux_line12 ?line12)
-;	(aux_column12 ?column12)
-;	
-;	(board (i ?aux_line1) (j ?aux_column1) (val ?casuta1))
-;	(board (i ?aux_line2) (j ?aux_column2) (val ?casuta2))
-;	(board (i ?aux_line3) (j ?aux_column3) (val ?casuta3))
-;	(board (i ?aux_line4) (j ?aux_column4) (val ?casuta4))
-;	(board (i ?aux_line5) (j ?aux_column5) (val ?casuta5))
-;	(board (i ?aux_line6) (j ?aux_column6) (val ?casuta6))
-;	(board (i ?aux_line7) (j ?aux_column7) (val ?casuta7))
-;	(board (i ?aux_line8) (j ?aux_column8) (val ?casuta8))
-;	(board (i ?aux_line9) (j ?aux_column9) (val ?casuta9))
-;	(board (i ?aux_line10) (j ?aux_column10) (val ?casuta10))
-;	(board (i ?aux_line11) (j ?aux_column11) (val ?casuta11))
-;	(board (i ?aux_line12) (j ?aux_column12) (val ?casuta12))
-;	
-;	=>
-;	
-;	(printout t "bla bla bla blab!!!! ", ?aux_line1 crlf)
-;	
-;)
 
 (defrule createAcoperisCol_stopCondition
 	(updateAcoperisuri)
@@ -1659,6 +1745,7 @@
 						(column ?currentColumn)
 					)
 	(test (eq ?currentLine 22))
+	(test (>= ?maxLine 3))
 	
 	=>
 	(printout t "###########" crlf)
@@ -1697,7 +1784,6 @@
 	(assert (aux_column9 (+ ?currentColumn 2)))
 	
 	
-	
 	(assert (aux_line10 (+ ?maxLine 1)))
 	(assert (aux_column10 ?currentColumn))
 	
@@ -1706,16 +1792,6 @@
 	
 	(assert (aux_line12 (+ ?maxLine 1)))
 	(assert (aux_column12 (+ ?currentColumn 2)))
-	
-	
-	(retract ?currentLineFact)
-	(assert (currentLine 1))
-	
-	(retract ?currentColumnFact)
-	(assert (currentColumn (+ ?currentColumn 1)))
-	
-	(retract ?maxLineFact)
-	(assert (maxLine 1))
 	
 )
 
